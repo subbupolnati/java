@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ROLE:<span th:text="${#session.getAttribute('role')}" style="color:blue; padding:5px"></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" th:href="@{/viewUsers}">All Users</a>
+        <a class="nav-link" th:href="@{/viewPosts}">All Posts</a>
+         <a class="nav-link" th:href="@{/viewTweets}">All Tweets</a>
+        <a class="nav-link" th:href="@{/logout}">Sign Out</a>
+      </div>
+    </div>
+  </div>
+</nav>

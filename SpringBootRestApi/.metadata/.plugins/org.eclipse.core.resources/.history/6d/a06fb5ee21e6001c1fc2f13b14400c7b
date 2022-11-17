@@ -1,0 +1,25 @@
+package com.airlinesproducer;
+
+import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.airlinesproducer.repository.AirlinesRepository;
+import com.airlinesproducer.repository.PassengerRepository;
+import com.airlinesproducer.service.AirlinesService;
+import com.airlinesproducer.service.PassengerService;
+
+public class AirlineServiceTest {
+
+	@Mock
+	AirlinesRepository airlineRepo;
+	
+	@Mock
+	PassengerRepository passengerRepo;
+	
+	@Autowired
+	AirlinesService airlineService;
+	
+	@Autowired
+	PassengerService passengerService;
+
+}

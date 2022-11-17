@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="#" th:href="@{/css/style.css}" />
+</head>
+<body>
+<header th:replace="includes/nav ::header"></header>
+<section th:replace="includes/nav :: javasidebar"></section>
+<article>
+<button class="topbutton1"><a  th:href="@{/histroyofjava}">Next</a></button>
+<h2>Java Tutorial</h2>
+<p>Our core Java programming tutorial is designed for students and working professionals. Java is an object-oriented
+, class-based, concurrent, secured and general-purpose computer-programming language. It is a widely used robust technology.</p>
+
+<h3>What is Java?</h3>
+<p>Java is a <b>programming language</b> and a <b>platform</b>. Java is a high level, robust, object-oriented and secure programming language.
+
+Java was developed by Sun Microsystems (which is now the subsidiary of Oracle) in the year 1995. James Gosling is known as the father of Java. Before Java, its name was Oak. Since Oak was already a registered company, so James Gosling and his team changed the name from Oak to Java.</p>
+<p><b>Platform: </b>Any hardware or software environment in which a program runs, is known as a platform. Since Java has a runtime environment (JRE) and API, it is called a platform.</p>
+<h3>Java Example</h3>
+<p>Simple.java<br>
+class Simple{ <br> 
+    &nbsp public static void main(String args[]){  <br>
+    &nbsp &nbsp System.out.println("Hello Java");  <br>
+   &nbsp }  <br>
+}  </p>
+
+<h3>Application</h3>
+<p>According to Sun, 3 billion devices run Java. There are many devices where Java is currently used. Some of them are as follows:
+<ol type="1">
+<li>Desktop Applications such as acrobat reader, media player, antivirus, etc.</li></br>
+<li>Web Applications such as irctc.co.in, javatpoint.com, etc.</li><br>
+<li>Enterprise Applications such as banking applications.</li><br>
+<li>Mobile</li><br>
+<li>Embedded System</li><br>
+<li>Smart Card</li><br>
+<li>Robotics</li><br>
+<li>Games, etc.</li><br>
+</ol>
+<h3>Types of Java Applications</h3>
+<p>There are mainly 4 types of applications that can be created using Java programming:</p>
+<h4>1) Standalone Application</h4>
+<p>Standalone applications are also known as desktop applications or window-based applications. These are traditional software that we need to install on every machine. Examples of standalone application are Media player, antivirus, etc. AWT and Swing are used in Java for creating standalone applications.</p>
+<h4>2) Web Applications</h4>
+<p>An application that runs on the server side and creates a dynamic page is called a web application. Currently, Servlet<br>
+, JSP<br>
+, Struts<br>
+, Spring<br>
+, Hibernate<br>
+, JSF<br>
+, etc. technologies are used for creating web applications in Java.</p>
+<h4>3) Enterprise Application</h4>
+<p>An application that is distributed in nature, such as banking applications, etc. is called an enterprise application. It has advantages like high-level security, load balancing, and clustering. In Java, EJB
+is used for creating enterprise applications.</p>
+
+<h4>4) Mobile Application</h4>
+<p>An application which is created for mobile devices is called a mobile application. Currently, Android and Java ME are used for creating mobile applications.</p>
+
+<h2>Java Platforms / Editions</h2>
+<p>There are 4 platforms or editions of Java:</p>
+
+<h4>1) Java SE (Java Standard Edition)</h4>
+<p>It is a Java programming platform. It includes Java programming APIs such as java.lang, java.io, java.net, java.util, java.sql, java.math etc. It includes core topics like OOPs, String
+, Regex, Exception, Inner classes, Multithreading, I/O Stream, Networking, AWT, Swing, Reflection, Collection, etc.</p>
+
+<h4>2) Java EE (Java Enterprise Edition)</h4>
+<p>It is an enterprise platform that is mainly used to develop web and enterprise applications. It is built on top of the Java SE platform. It includes topics like Servlet, JSP, Web Services, EJB, JPA
+, etc.</p>
+
+<h4>3) Java ME (Java Micro Edition)</h4>
+<p>It is a micro platform that is dedicated to mobile applications.</p>
+
+<h4>4) JavaFX</h4>
+<p>It is used to develop rich internet applications. It uses a lightweight user interface API.</p>
+<button class="bottombutton"><a  th:href="@{/histroyofjava}">Next</a></button>
+</article>
+
+</body>
+</html>

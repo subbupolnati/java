@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link th:href="@{/styles/style-backend.css}" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="top-area">
+		<center><h2>Admin Panel</h2></center> <a th:href="@{/logout}" class="button" style="float: right;background:crimson;color:white">Logout</a>
+	</div>
+<!-- SIDEBAR -->
+			<div class="sidebar" style="background-image: url(images/sidebar-1.jpg)">
+				<div class="sidebar-background" >
+					<h2 class="logo-text">
+						Online Examination System
+					</h2>
+
+					<div class="left-menu">
+						<a class="active" th:href=@{/course}><h2>Courses</h2></a>
+                        <a th:href="@{/addQues}"><h2>Questions</h2></a>
+					</div>
+				</div>
+			</div>
+            <!-- CONTENT AREA -->
+			<div class="content-area">
+				<div class="panel" style="max-width: 420px;float:right">
+                     <div class="title">All Courses</div>
+                        <table id="one-column-emphasis" style="min-width: 400px;margin: 5px; margin-top: 35px" >
+						    <colgroup>
+						    	<col class="oce-first" />
+						    </colgroup>
+    						<thead>
+						    	<tr>
+						        	<th scope="col">Courses</th>
+						                
+						            <th scope="col">T.Marks</th>
+						            <th scope="col">Action</th>
+						            
+						        </tr>
+						    </thead>
+	 					        <tr th:each="c:${listCourses}">
+							        <td th:text="${c.cName}"></td>
+							        <td th:text="${c.tmarks}"></td>
+		        					<td ><a th:href="@{/delete/{cName}(cName=${c.cName})}">
+		        						<div class="delete-btn" style="max-width:50px;font-size: 17px; padding: 3px">Delete</div>
+		            					</a></td>
+	   							 </tr>
+            			</table>
+        		</div>
+		        <div  class="panel form-style-6" style="max-width: 450px">
+		           <div class="title">Add New Course</div>
+		            <center><form th:action="@{/coursesave}" method="post" th:object="${course}"><br>
+		              <table>
+		               	<tr>
+		               		<td><label>Course Name</label></td>
+		                    <td><input type="text" th:field="*{cName}" class="text" placeholder="Course Name"  style="width: 230px;"></td>
+		                </tr>
+		                <tr>
+		                  <td><label>Total Marks</label></td>
+		                  <td><input type="text"th:field="*{tmarks}" class="text" placeholder="Total Marks" style="width: 230px;"></td>
+		                </tr>
+		                <tr>
+			                <td><label>Exam Time</label></td>
+			                <td><input type="text" th:field="*{time}" class="text" placeholder="MM" style="width: 230px;"></td> 
+		                </tr>
+		              </table>
+							<center><input type="submit" class="form-button" value="Add" name="submit"></center></td>
+		             </form>
+		            </center>
+		    </div>
+		     </div>
+                       

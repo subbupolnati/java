@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+Student id<h2 th:text="${sid}"></h2>
+Student Name<h2 th:text="${sname}"></h2>
+
+<h1 th:text="${#strings.toUpperCase(sname)}"></h1>
+<h1 th:text="${#strings.toLowerCase(sname)}"></h1>
+<h2 th:with="a=${10},b=${20}">
+Addition of two numbers::<span th:text="${a}+${b}"></span>
+</h2>
+<h1>Usages of Elvis</h1>
+<span th:text="${isActive}?'Active':'NotActive'"/>
+
+<h1 th:if="${gender}=='M'">Male</h1>
+<h1 th:unless="${gender}=='M'">Female</h1>
+<ul>
+<li th:each="n:${names}">
+<span th:text="${n}"></span></li>
+</ul>
+</body>
+</html>

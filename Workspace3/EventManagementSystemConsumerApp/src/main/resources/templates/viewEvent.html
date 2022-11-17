@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<style>
+body{
+	background-image: url("https://c.wallhere.com/photos/ba/2f/soft_gradient_solid_color_gradient-1537173.jpg!d");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+table, th, td {
+  border: 1px solid black;
+}
+.message{
+
+	color: red;
+}
+</style>
+</head>
+<body>
+
+<div th:replace="includes/nav ::nav">...</div>
+<div align="center">
+<h1>Event List </h1>
+<div align="center">
+<form action="#" th:action="@{/searchEvent}" method="POST">
+        <div>
+            <input type="search" name="name" placeholder="search by event">
+            <input type="submit" value="search">
+        </div>
+        
+</form>
+</div>
+<table border="2"  width=40%>
+
+<tr>
+<th>Event Id</th>
+<th>Event Name</th>
+<th>StartTime</th>
+<th>EndTime</th>
+<th>ParticipentName</th>
+<th>MobileNumber</th>
+<th>VenueName</th>
+<!-- <th>VenueAddress</th>
+<th>VenueCity</th> -->
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+<tr th:each="e:${eventList}">
+		<td th:text="${e.eventid}"></td>
+		<td th:text="${e.eventName}"></td>
+		<td th:text="${e.startTime}"></td>
+		<td th:text="${e.endTime}"></td>
+		<td th:text="${e.participantName}"></td>
+		<td th:text="${e.mobileNumber}"></td>
+		<td th:text="${e.venue.venueName}"></td>
+		<!-- <td th:text="${e.venue.venueAddress}"></td>
+		<td th:text="${e.venue.city}"> -->
+		<td><a th:href="@{/updateEvent/{id}(id=${e.eventid})}">Edit</a></td>
+        <td><a th:href="@{/deleteEvent/{id}(id=${e.eventid})}">Delete</a></td>
+  </tr>
+  
+  </table>
+  <div class="message" th:if="${message}">
+		<strong th:text="${message}"></strong>
+	</div>
+	<!-- <a th:href="@{/}">HomePage</a> -->
+</div> 
+</body>
+</html>

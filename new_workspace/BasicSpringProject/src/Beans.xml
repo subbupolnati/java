@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="e" class="com.emp.Employee">
+<property name="eid" value="100"/>
+<property name="ename" value="Mohan"/>
+<property name="salary" value="8900"/>
+</bean>
+
+<bean id="s" class="com.student.Student">
+<property name="sid" value="10"/>
+<property name="sname" value="subbu"/>
+<property name="marks" value="100"/>
+</bean>
+<bean id="p" class="com.product.Product">
+<property name="pid" value="52"/>
+<property name="pname" value="keyboard"/>
+<property name="price" value="1000"/>
+</bean>
+<bean id="b" class="com.book.Book">
+<property name="bid" value="100"/>
+<property name="bname" value="java"/>
+<property name="price" value="250"/>
+<property name="author" value="james"/>
+</bean>
+<bean id="c" class="com.customer.Customer">
+<property name="cid" value="5"/>
+<property name="cname" value="veera"/>
+<property name="address" value="hyd"/>
+</bean>
+<bean id="ba" class="com.bank.Bank">
+<property name="acno" value="11521"/>
+<property name="dep" value="10000"/>
+<property name="bal" value="10000"/>
+</bean>
+</beans>

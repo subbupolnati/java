@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="#" th:href="@{/css/style.css}" />
+</head>
+<body>
+<header th:replace="includes/nav ::header"></header>
+<section th:replace="includes/nav :: javasidebar"></section>
+<article>
+<button class="topbutton"><a th:href="@{/javavariable}">Previous</a></button><button class="topbutton1"><a th:href="@{/keywords}">Next</a></button><br>
+<br>
+<h2>Data Types in Java</h2>
+<p>Data types specify the different sizes and values that can be stored in the variable. There are two types of data types in Java:</p>
+<ol type="1">
+<li><b>Primitive data types:</b> The primitive data types include boolean, char, byte, short, int, long, float and double.</li><br>
+<li><b>Non-primitive data types:</b> The non-primitive data types include Classes</li><br>
+, Interfaces
+, and Arrays
+.
+</ol>
+<h3>Java Primitive Data Types</h3>
+<p>In Java language, primitive data types are the building blocks of data manipulation. These are the most basic data types available in Java language
+<br>
+There are 8 types of primitive data types:</p>
+<ul type="circle">
+<li><b style="color:blue;">boolean</b> data type</li><br>
+<li><b style="color:blue;">byte</b> data type</li><br>
+<li><b style="color:blue;">char</b> data type</li><br>
+<li><b style="color:blue;">short</b> data type</li><br>
+<li><b style="color:blue;">int</b> data type</li><br>
+<li><b style="color:blue;">long</b> data type</li><br>
+<li><b style="color:blue;">float</b> data type</li><br>
+<li><b style="color:blue;">double</b> data type</li><br>
+</ul>
+<img src="https://static.javatpoint.com/images/java-data-types.png"  style="width:800px;height:300px; float:center;"></br>
+<br>
+<table border="1" style="width:800px;height:300px; float:center; text-align: center;">
+<tr>
+<th><b>Data Type</b></th>
+<th><b>Default Value</b></th>
+<th><b>Default size</b></th>
+</tr>
+<tr><td>boolean</td>
+<td>false</td>
+<td>1 bit</td>
+</tr>
+<tr><td>char</td>
+<td>'\u0000'</td>
+<td>2 byte</td>
+</tr>
+<tr><td>byte</td>
+<td>0</td>
+<td>1 byte</td></tr>
+<tr><td>short</td>
+<td>2 byte</td>
+<td>1 bit</td></tr>
+<tr><td>int</td>
+<td>0</td>
+<td>4 byte</td></tr>
+<tr><td>long</td>
+<td>0L</td>
+<td>8 byte</td>
+</tr>
+<tr><td>false</td>
+<td>0.0f</td>
+<td>4 byte</td>
+</tr>
+<tr><td>double</td>
+<td>0.0d</td>
+<td>8 byte</td>
+</tr>
+</table><br>
+<h3>Boolean Data Type</h3>
+<p>The Boolean data type is used to store only two possible values: true and false. This data type is used for simple flags that track true/false conditions.</p>
+<p>The Boolean data type specifies one bit of information, but its "size" can't be defined precisely.</p>
+<b>Example: </b>
+<div class="code">
+Boolean one = false 
+</div>
+<h3>Byte Data Type</h3>
+<p>The byte data type is an example of primitive data type. It isan 8-bit signed two's complement integer. Its value-range lies between -128 to 127 (inclusive). Its minimum value is -128 and maximum value is 127. Its default value is 0.
+<br><br>
+The byte data type is used to save memory in large arrays where the memory savings is most required. It saves space because a byte is 4 times smaller than an integer. It can also be used in place of "int" data type.</p>
+<b>
+Example:</b>
+<div class="code">
+byte a = 10;
+</div>
+<h3>Short Data Type</h3>
+<p>The short data type is a 16-bit signed two's complement integer. Its value-range lies between -32,768 to 32,767 (inclusive). Its minimum value is -32,768 and maximum value is 32,767. Its default value is 0.
+<br><br>
+The short data type can also be used to save memory just like byte data type. A short data type is 2 times smaller than an integer.</p>
+<b>Example:</b>
+<div class="code">short s = 10000, short r = -5000;</div>  
+<h3>Int Data Type</h3>
+<p>The int data type is a 32-bit signed two's complement integer. Its value-range lies between - 2,147,483,648 (-2^31) to 2,147,483,647 (2^31 -1) (inclusive). Its minimum value is - 2,147,483,648and maximum value is 2,147,483,647. Its default value is 0.
+<br><br>
+The int data type is generally used as a default data type for integral values unless if there is no problem about memory.</p>
+<b>Example:</b>
+<div class="code">int a = 100000, int b = -200000;</div>
+
+<h3>Long Data Type</h3>
+<p>The long data type is a 64-bit two's complement integer. Its value-range lies between -9,223,372,036,854,775,808(-2^63) to 9,223,372,036,854,775,807(2^63 -1)(inclusive). <br>Its minimum value is - 9,223,372,036,854,775,808and maximum value is 9,223,372,036,854,775,807. Its default value is 0. The long data type is used when you need a range of values more than those provided by int.
+</p>
+<b>Example:</b>
+<div class="code">long a = 100000L, long b = -200000L;</div>  
+<h3>Float Data Type</h3>
+<p>The float data type is a single-precision 32-bit IEEE 754 floating point.Its value range is unlimited. It is recommended to use a float (instead of double) if you need to save memory in large arrays of floating point numbers. The float data type should never be used for precise values, such as currency. Its default value is 0.0F.
+</p><b>Example:</b>
+<div class="code">float f1 = 234.5f;</div>
+  
+<h3>Double Data Type</h3>
+<p>The double data type is a double-precision 64-bit IEEE 754 floating point. Its value range is unlimited. The double data type is generally used for decimal values just like float. The double data type also should never be used for precise values, such as currency. Its default value is 0.0d.
+</p>
+<b>Example:</b>
+<div class="code">double d1 = 12.3;</div>  
+<h3>Char Data Type</h3>
+<p>The char data type is a single 16-bit Unicode character. Its value-range lies between '\u0000' (or 0) to '\uffff' (or 65,535 inclusive).The char data type is used to store characters.
+</p>
+<b>Example:</b>
+<div class="code">char letterA = 'A';</div><br>
+<button class="bottombutton"><a th:href="@{/javavariable}">Previous</a></button><button class="bottombutton1"><a th:href="@{/keywords}">Next</a></button><br>  
+</article>
+</body>
+</html>

@@ -1,0 +1,156 @@
+@charset "ISO-8859-1";
+<style>
+header {
+  background: #E5E4E2;;
+  //padding: 30px;
+  //text-align: center;
+  font-size: 35px;
+  //color: white;
+}
+
+body {
+	padding:0;
+	margin:0;
+  font-family: "Lato", sans-serif;
+  background-color: 6
+}
+.head{
+	width:100%;
+	position: fixed;
+	background: #E5E4E2;
+	margin-top: 0px;
+}
+.head ul {
+  list-style-type: none;
+  margin-top:5px;
+  padding: 0;
+  width:100%;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.head li {
+  float: left;
+}
+
+.head li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.head li a:hover {
+  background-color: #111;
+}
+input[type=text] {  
+padding-left: 10px;  
+margin-top: 8px;
+margin-left:30px;
+width:55%; 
+font-size: 17px;  
+}  
+.sidenav {
+  height:100%;
+  width:180px;
+  position: fixed;
+  z-index: 1;
+  top: 110px;
+  left: 5px;
+  background: #E5E4E2;
+  overflow-x:hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size:16px;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: blue;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+article {
+  margin-top:90px;
+  margin-left:14%;
+  background-color: white;
+  padding: 10px;
+}
+h3,h2{
+	color:#732626;
+}
+h4{
+	color:#990000;
+}
+.topbutton{
+	float:left;
+	font-size: 20px;
+	margin-top:10px;
+	background-color: green;
+	
+}
+.topbutton a{
+	color:#ffffff;
+	text-decoration: none;
+}
+.topbutton1{
+	float:right;
+	margin-right:50px;
+	font-size: 20px;
+	margin-top:10px;
+	background-color: green;
+	
+}
+.topbutton1 a{
+	color:#ffffff;
+	text-decoration: none;
+}
+.bottombutton a{
+	color:#ffffff;
+	text-decoration: none;
+}
+.bottombutton{
+	float:left;
+	font-size: 20px;
+	background-color: green;
+	margin-bottom: -150px;
+}
+.bottombutton1 a{
+	color:#ffffff;
+	text-decoration: none;
+}
+.bottombutton1{
+	float:right;
+	font-size: 20px;
+	background-color: green;
+	margin-bottom: -150px;
+}
+.code{
+  list-style-type: none;
+  margin-top:5px;
+  padding:5px;
+  width:100%;
+  overflow: hidden;
+  background-color: #333;
+  color:white;
+}
+</style>

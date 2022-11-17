@@ -1,0 +1,46 @@
+management:
+  endpoint:
+     health:
+       show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health
+  health:
+    circuitbreakers:
+      enabled: true
+resilience4j:
+  circuitbreaker:
+    instances:
+     USERCIRCUITBREAKER:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        waitDurationInOpenState: 5s
+        slidingWindowType: COUNT_BASED
+
+server:
+  port: 9002
+spring:
+  application:
+    name: UserService
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    password: tiger
+    url: jdbc:oracle:thin:@localhost:1521:admin
+    username: c##scott2
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: true
+        globally_quoted_identifiers: true
+    show-sql: true
+
+    

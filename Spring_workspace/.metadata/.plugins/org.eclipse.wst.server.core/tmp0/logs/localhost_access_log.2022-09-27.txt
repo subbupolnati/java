@@ -1,0 +1,15 @@
+127.0.0.1 - - [27/Sep/2022:18:13:44 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:13:51 +0530] "GET /BookApplicationMVCHibernate/ HTTP/1.1" 200 551
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:13:53 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:14:22 +0530] "GET /BookApplicationMVCHibernate/insert?bid=1&bname=ssss&bprice=677&bauth=sdss HTTP/1.1" 500 22518
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:15:15 +0530] "GET /BookApplicationMVCHibernate/viewall? HTTP/1.1" 500 22518
+127.0.0.1 - - [27/Sep/2022:18:16:27 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:16:29 +0530] "GET /BookApplication/WEB-INF/classes/Book.hbm.xml HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:16:30 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:16:49 +0530] "GET /BookApplication/ HTTP/1.1" 200 248
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:16:50 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:17:03 +0530] "GET /BookApplication/viewall HTTP/1.1" 500 17524
+127.0.0.1 - - [27/Sep/2022:18:18:09 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:18:09 +0530] "GET /BookApplication/WEB-INF/classes/com/book/controller/BookController.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:18:16 +0530] "GET /BookApplication/ HTTP/1.1" 200 248
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:18:18:26 +0530] "GET /BookApplication/viewall HTTP/1.1" 500 17524

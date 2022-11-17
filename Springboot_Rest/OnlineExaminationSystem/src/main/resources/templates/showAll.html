@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title></title>
+	<link th:href="@{/styles/style-backend.css}" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="top-area">
+		<center><h2>Admin Panel</h2></center> <a th:href="@{/logout}" class="button" style="float: right;background:crimson;color:white">Logout</a>
+	</div>
+<!-- SIDEBAR -->
+			<div class="sidebar" style="background-image: url(images/sidebar-1.jpg)">
+				<div class="sidebar-background" >
+					<h2 class="logo-text">
+						Online Examination System
+					</h2>
+
+					<div class="left-menu">
+						<a class="active" th:href=@{/course}><h2>Courses</h2></a>
+                        <a th:href="@{/addQues}"><h2>Questions</h2></a>
+					</div>
+				</div>
+			</div>
+<!-- CONTENT AREA -->
+            <div class="content-area" >
+                <center>
+                   <div class="question-panel">
+                   <div class="question">
+                   <ol type="1" th:each="q:${ques}">
+                   	<label th:text="${q.question}"></label>
+						<div class="answer">
+                            <label class="show" th:text="${q.opt1}">opt1</label>
+							<label class="show" th:text="${q.opt2}">opt2</label>
+							<label class="show"th:text="${q.opt3}">opt3</label>
+							<label class="show"th:text="${q.opt4}">opt4</label>
+                           	<label class="show-correct"th:text="${q.correct}">correct</label>
+						</div>
+						</ol>
+						</div>
+					</div>
+				</div>
+       </center>
+</body>
+</html>

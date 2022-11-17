@@ -1,0 +1,15 @@
+package com.exception;
+
+import java.util.Scanner;
+
+public class Spaces {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter String 1");
+		String str=sc.nextLine();
+		String str1=str.replace(" ", "");
+		System.out.println(str1);
+	}
+
+}

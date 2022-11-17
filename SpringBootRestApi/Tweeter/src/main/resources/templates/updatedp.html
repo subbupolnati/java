@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+	background-color:#c6cfec;
+	background-image: url("https://www.exhibit.tech/wp-content/uploads/2022/02/Twitter.jpg");
+	background-repeat: no-repeat;
+	}
+	button {
+		padding: 10px;
+	}
+	span {
+		color: red;
+		font-style: italic;
+	}
+	form {
+		display: table;
+	}
+	form div {
+		display: table-row;
+	}
+	label, input, span, select {
+		display: table-cell;
+		margin: 5px;
+		text-align: left;
+	}
+	input[type=text], input[type=password], select, textarea {
+		width: 200px;
+		margin: 5px;
+	}
+	form div div {
+		display: table-cell;
+	}
+</style>
+</head>
+<body>
+	<div align="center">
+	<h1>Change Profile Picture</h1>
+	
+		<form action="#" th:action="@{/changeDpSave}" method="post" th:object="${tweet}"enctype="multipart/form-data">
+		<div>
+			<input type="hidden" th:field="*{username}"/><br/>
+		</div>
+		<div>
+			<input type="hidden" th:field="*{tweet}"/><br/>
+		</div>
+		<div>
+		<input type="hidden" th:field="*{followings}"/>
+		</div>
+		<div>
+		<input type="hidden" th:field="*{followers}"/>
+		</div>
+		<div>
+		<label>ProfilePicture</label>
+		<input type="file" th:name="imagefile" accept="image/png, image/jpeg,image/jpg" />
+		</div>
+		<input type="submit" value="submit">
+		<input type="reset" value="Clear">
+		</form>
+	</div>
+
+</body>
+</html>

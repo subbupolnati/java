@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="#" th:href="@{/css/style.css}" />
+</head>
+<body>
+<header th:replace="includes/nav ::header"></header>
+<section th:replace="includes/nav :: javasidebar"></section>
+<article>
+<button class="topbutton"><a th:href="@{/jdkjvm}">Previous</a></button><button class="topbutton1"><a th:href="@{/datatypes}">Next</a></button><br>
+<br>
+<h2>Java Variables</h2>
+<p>A variable is a container which holds the value while the Java program<br>
+is executed. A variable is assigned with a data type.<br>
+
+Variable is a name of memory location. There are three types of variables in java: local, instance and static.<br>
+
+There are two types of data types in Java:<br> primitive and non-primitive.</p>
+<h2>Variable</h2>
+<p>A variable is the name of a reserved area allocated in memory. In other words, it is a name of the memory location. It is a combination of "vary + able" which means its value can be changed.</p>
+<img src="https://static.javatpoint.com/core/images/variable.png"  style="width:500px;height:300px; float:center;"></br>
+<div class="code">
+<code>int data=50;//Here data is variable </code>
+</div>
+<h3>Types of Variables</h3>
+<p>There are three types of variables in Java:</p>
+<ul type="circle">
+<li>local variable</li><br>
+<li>instance variable</li><br>
+<li>static variable</li><br>
+</ul>
+<img src="https://static.javatpoint.com/core/images/types-of-variables1.png"  style="width:500px;height:500px; float:center;"></br>
+<h3>1) Local Variable</h3>
+<p>A variable declared inside the body of the method is called local variable. You can use this variable only within that method and the other methods in the class aren't even aware that the variable exists.
+<br>
+A local variable cannot be defined with "static" keyword.</p>
+
+<h3>2) Instance Variable</h3>
+<p>A variable declared inside the class but outside the body of the method, is called an instance variable. It is not declared as static.<br>
+It is called an instance variable because its value is instance-specific and is not shared among instances.</p>
+
+<h3>3) Static variable</h3>
+<p>A variable that is declared as static is called a static variable. It cannot be local. You can create a single copy of the static variable and share it among all the instances of the class. Memory allocation for static variables happens only once when the class is loaded in the memory.</p>
+
+<h2>Example to understand the types of variables in java</h2>
+<div class="code">
+<code>
+public class A{<br>
+    &nbsp static int m=100;//static variable <br> 
+    &nbsp void method()<br>  
+    &nbsp { <br>   
+        &nbsp &nbsp int n=90;//local variable<br>    
+    &nbsp }<br>  
+   &nbsp public static void main(String args[]){<br>  
+      &nbsp &nbsp   int data=50;//instance variable<br>    
+    &nbsp }<br>  
+}//end of class   <br>
+
+</code>
+</div>
+<br>
+<button class="bottombutton"><a th:href="@{/jdkjvm}">Previous</a></button><button class="bottombutton1"><a th:href="@{/datatypes}">Next</a></button><br>
+</article>
+</body>
+</html>

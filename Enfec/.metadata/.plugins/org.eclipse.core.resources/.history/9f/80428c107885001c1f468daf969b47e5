@@ -1,0 +1,69 @@
+package com.employee;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import com.employee.manager.Marketing_Executive;
+import com.employee.marketing.Manager;
+@TestInstance(Lifecycle.PER_CLASS)
+class Employee1Test {
+	Employee1 e;
+	Employee1 e1;
+	@BeforeAll
+	void init() {
+		e=new Marketing_Executive(100,"subbu",10000);
+		e1=new Manager(101,"su",12000);
+		
+	}
+	@AfterAll
+	void destroy() {
+		e=null;e1=null;
+	}
+	@Test
+	void test() {
+		assertTrue(e.bsal>=10000);
+	}
+	@Test
+	void test1() {
+		assertFalse(e.gross>=10900);
+	}
+	@Test
+	void test2() {
+		assertNotSame(e,e1);
+	}
+	@Test
+	void test3() {
+		assertSame(e,e1);
+	}
+	@Test
+	void test4() {
+		assertEquals(e1.calcSalary(),13200);
+	}
+	@Test
+	void test5() {
+		assertEquals(e1.calcSalary(),10900);
+	}
+	@Test
+	void test6() {
+		assertTrue(e1.eid>=101);
+	}
+	@Test
+	void test7() {
+		assertTrue(e1.ename=="su");
+	}
+	@Test
+	void test8() {
+		assertTrue(e.ename=="subbu");
+	}
+	@Test
+	void test9() {
+		assertEquals(e1.gross,12000);
+	}
+}

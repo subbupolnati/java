@@ -1,0 +1,29 @@
+package com.employee.marketing;
+
+import com.employee.Employee1;
+
+public class Manager extends Employee1{
+int incentive;
+//getter setter methods
+public int getIncentive() {
+	return incentive;
+}
+public void setIncentive(int incentive) {
+	this.incentive = incentive;
+}
+//constructor
+public Manager(int eid, String ename, int bsal) {
+	super(eid, ename, bsal);
+	this.incentive = calcIncentive();
+}
+//method incentive implementation
+int calcIncentive(){
+	incentive=(int)(bsal*0.1);
+	return incentive;
+}
+//calculate salary method implementation
+public int calculateSalary() {
+	gross=bsal+incentive;
+	return gross;
+}
+}

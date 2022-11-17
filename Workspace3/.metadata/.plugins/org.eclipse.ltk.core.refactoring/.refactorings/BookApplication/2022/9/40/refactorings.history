@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Beans.xml&apos; to &apos;EmployeeApplicationUsingDI/src/com.employee.resource&apos;&#x0D;&#x0A;- Original project: &apos;BookApplication&apos;&#x0D;&#x0A;- Destination element: &apos;EmployeeApplicationUsingDI/src/com.employee.resource&apos;&#x0D;&#x0A;- Original element: &apos;Beans.xml&apos;" description="Copy file" destination="=EmployeeApplicationUsingDI/src&lt;com.employee.resource" element1="src/com/book/resource/Beans.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1664346201932" units="0" version="1.0"/>
+</session>

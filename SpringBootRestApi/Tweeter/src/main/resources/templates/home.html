@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.nav{
+			border-style: solid;
+			border-color: cyan;
+			padding-top: 2px;
+			padding-bottom: 2px;
+		}
+		body{
+		background-image: url("https://1000logos.net/wp-content/uploads/2017/06/Twitter-Logo-2010-500x281.png");
+		background-repeat: no-repeat;
+		background-position: center;}
+		.nav a{
+			text-decoration: none;
+			color: black;
+			padding-left: 30px;
+			font-size: 20px;
+		}
+		.nav img{
+			padding-left:50px;
+			margin-top: 5px;
+		}
+		.nav button{
+			float: right;
+			margin-right:25px;
+			margin-top: 5px;
+			background: blue;
+			color: white;
+			border-radius: 12px;
+ 			padding: 5px;
+		}
+		section{
+			//border: 5px solid green;
+			max-width:1190px;
+			margin-left:150px;
+			margin-right:80px;
+			height:600px;
+		}
+		.float-child{
+			//border: 1px solid black;
+			width:290px;
+			margin-top: 0;
+			float: left;
+			height: 100%;
+		}
+		.float-child1{
+			//border: 1px solid black;
+			width:47%;
+			margin-top: 0;
+			margin-left:15px;
+			float: left;
+			z-index: 100;
+			height:100%;
+		}
+		.float-child h1{
+			padding-top:10px;
+			padding-bottom:35px;
+			padding-left:25px;
+			margin-top: 0;
+			color: white;
+		}
+		a{
+		text-decoration: none;}
+		.float-child button{
+			margin-right:25px;
+			margin-top: 5px;
+			width: 100px;
+			background-color: lightblue; 
+			color:white;
+			border-radius: 12px;
+ 			padding: 5px;
+		}
+		.float-child2{
+			//border: 5px solid orange;
+			width:250px;
+			margin-top: 0;
+			float: right;
+			height: 200px;
+		}
+		.avatar {
+		  vertical-align: middle;
+		  width: 50px;
+		  height: 50px;
+		  border-radius: 50%;
+		}
+		h3{
+			padding-left:5px;	
+		}
+		.float-child2 button{
+			margin-right:25px;
+			margin-top: 5px;
+			width: 100px;
+			background:white;
+			color: blue;
+			border-radius: 12px;
+ 			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+<div class="nav">
+	<a th:text="${#session.getAttribute('role')}" style="color:blue; padding:5px">>Home</a>
+	<a href="#">Moments</a>
+	<a href="#">Notifications</a>
+	<a href="#">Messages</a>
+	<a th:href="@{/logout}">Logout</a>
+	<img src="https://static01.nyt.com/images/2014/08/10/magazine/10wmt/10wmt-superJumbo-v4.jpg" width="35px" height="25px">
+	<button>Tweet</button>
+</div>
+<section th:each="e:${tweet}">
+	<div class="float-child">
+		<h1 style="background-color: black;"th:text="${e.username}"></h1><img th:src="'data:image/*;base64,' + ${e.image}" class="avatar"style="margin-top: -55px;margin-left: 5px;">
+		<p style="margin-top: -35px;margin-left:65px;font-size: 20px;"><b><u><span th:text="${e.username}"></span></u></b><br>
+		@<span th:text="${e.username}"></span></p>
+		<p style="margin-left: 5px; float: left;">Tweets<br>
+		<span th:text="${e.tweet}" style="color:blue;"></span></p>
+		<p style="margin-left: 15px; float:left">following<br>
+		<span th:text="${e.followings}"style="color:blue;"></span></p>
+		<p style="margin-left: 25px;float: left;">followers<br>
+		<span th:text="${e.followers}"style="color:blue;"></span></p><br><br>
+		<button><a th:href="@{/changedp/{id}(id=${e.username})}">Change DP</a></button>
+		<button><a th:href="@{/post/{id}(id=${e.username})}">Tweet</a></button>
+	</div>
+	<div  class="float-child1">
+		<tr th:each="p:${post}">
+		<td><img th:src="'data:image/*;base64,' + ${e.image}"class="avatar"style="margin-top:5px;margin-left: 5px;">
+		<p style="margin-top: -45px;margin-left:65px;font-size: 20px;"><b th:text="${p.user.userName}"></b>
+		@<span th:text="${p.user.userName}"></span><br>
+		<span th:text="${p.posts}"></span>
+		<!-- <a th:href="@{/delete/{id}(id=${p.postId})}">Remove Post</a> --></p></td>
+		</tr>
+	</div>
+	
+	<div class="float-child2">
+		<h3>Who to follow</h3><br>
+		<img src="https://png.pngtree.com/element_our/png/20181022/man-avatar-icon-professional-man-character-business-man-avatar-carton-symbol-png_206531.jpg"class="avatar"style="margin-top:-15px;margin-left: 5px;">
+		<p style="margin-top: -45px;margin-left:65px;font-size: 17px;"><b>Lingulni</b>
+		@lingulni<br><button><a th:href="@{/followings/{id}(id=${e.username})}">follow</a></button></p>
+		<img src="https://aeducation.co.uk/wp-content/uploads/2015/07/avatar-png-icon-6-1.png"class="avatar"style="margin-top:-5px;margin-left: 5px;">
+		<p style="margin-top: -45px;margin-left:65px;font-size: 17px;"><b>CS1320TA</b>@cs1320ta<br><button ><a th:href="@{/followings/{id}(id=${e.username})}">follow</a></button></p>
+	</div>
+</section>
+</body>
+</html>

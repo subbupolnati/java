@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/style-backend.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="top-area">
+		<center><h2>Exam Panel</h2></center> <a th:href="@{/logout}" class="button" style="float: right;background:crimson;color:white">Logout</a>
+	</div>
+<div class="sidebar" style="background-image: url(images/sidebar-1.jpg)">
+				<div class="sidebar-background" >
+					<h2 class="logo-text">
+						Online Examination System
+					</h2>
+
+					<div class="left-menu">
+						<a class="active" th:href=@{/userhome}><h2>Exam</h2></a>
+					</div>
+				</div>
+			</div>
+<div class="content-area">
+             	<div class="panel form-style-6" style="float: left;max-width: 900px; padding-top: 40px;">
+             	
+             	<h1>Examination Application</h1>
+				<h2>Exam Results</h2>
+             	<section>
+	<p th:text="'Your score in '+${courseName}+': '+${score}+' / '+${total}"/>
+</section>
+             	
+             	</div>
+             	</div>

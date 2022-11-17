@@ -1,0 +1,31 @@
+package com.string;
+import java.util.*;
+public class Speccount {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int acount=0,nc=0,scount=0,spcount=0;
+		System.out.println("enter a String");
+		String s=sc.next();
+		for(int i=0;i<s.length();i++)
+		{	if(s.charAt(i)>='a' && s.charAt(i)<='z' || s.charAt(i)>='A' && s.charAt(i)<='Z')
+			{
+		    acount++;
+		    }
+		    else if(s.charAt(i)>='0' && s.charAt(i)<='9')
+		    {
+		    nc++;
+		    }
+		    else if(s.charAt(i)==32)
+		    {
+		    spcount++;
+		    }
+		    else if(s.charAt(i)>=33 && s.charAt(i)<=47 || s.charAt(i)==64)
+		    {
+		    scount++;
+		    }
+		}
+		System.out.println("special  count is:="+scount);
+		System.out.println("spaces  count is:="+spcount);
+	}
+
+}

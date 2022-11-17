@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="#" th:href="@{/css/style.css}" />
+</head>
+<body>
+<header th:fragment="header">
+<div class="head">
+Tutorial<input type="text"/><button type="submit"><i class="fa fa-search"></i></button>
+<ul>
+  <li><a class="active" th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/home.png" alt="home" />Home</a></li>
+  <li><a th:href="@{/java}"><img src="https://static.javatpoint.com/images/icon/java.png" alt="java" />Java</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/python.png" alt="python" />python</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/js.png" alt="javascript" />JavaScripts</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/html.png" alt="html" />HTML</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/sql.png" alt="sql" />SQL</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/php.png" alt="php" />PHP</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/cpp.png" alt="c++" />C++</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/csharp.png" alt="c#" /> C#</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/ds.png" alt="data structures" />DS</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/aptitude.png" alt="aptitude" />Aptitude</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/reasoning.png" alt="reasoning" /> Reasoning</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/dbms.png" alt="dbms" />DBMS</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/c.png" alt="c" /> C</a></li>
+  <li><a th:href="@{/}"><img src="https://static.javatpoint.com/images/icon/android.png" alt="android" /> Android</a></li>
+</ul>
+</div>
+</header>
+<section th:fragment="javasidebar">
+<div class="sidenav">
+  <a th:href="@{/java}">What is Java</a>
+  <a th:href="@{/histroyofjava}">History of Java</a>
+  <a th:href="@{/featuresofjava}">Features of Java</a>
+  <a th:href="@{/jdkjvm}">JDK,JRE and JVM</a>
+   <a th:href="@{/javavariable}">Java Variables</a>
+  <a th:href="@{/datatypes}">Java Data Types</a>
+  <a th:href="@{/keywords}">Keywords</a>
+</div>
+</section>
+</body>
+</html>

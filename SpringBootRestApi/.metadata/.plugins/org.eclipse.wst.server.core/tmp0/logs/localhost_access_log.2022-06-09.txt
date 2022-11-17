@@ -1,0 +1,9 @@
+127.0.0.1 - - [09/Jun/2022:14:30:37 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [09/Jun/2022:14:31:04 +0530] "GET /CalculaterApp/calculator.jsp HTTP/1.1" 200 484
+0:0:0:0:0:0:0:1 - - [09/Jun/2022:14:31:04 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [09/Jun/2022:14:31:15 +0530] "POST /CalculaterApp/Calaculator HTTP/1.1" 200 23
+127.0.0.1 - - [09/Jun/2022:14:37:34 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [09/Jun/2022:14:37:41 +0530] "POST /CalculaterApp/Calaculator HTTP/1.1" 200 26
+0:0:0:0:0:0:0:1 - - [09/Jun/2022:14:37:45 +0530] "POST /CalculaterApp/Calaculator HTTP/1.1" 200 29
+0:0:0:0:0:0:0:1 - - [09/Jun/2022:14:37:49 +0530] "POST /CalculaterApp/Calaculator HTTP/1.1" 200 32
+0:0:0:0:0:0:0:1 - - [09/Jun/2022:14:37:51 +0530] "POST /CalculaterApp/Calaculator HTTP/1.1" 200 26

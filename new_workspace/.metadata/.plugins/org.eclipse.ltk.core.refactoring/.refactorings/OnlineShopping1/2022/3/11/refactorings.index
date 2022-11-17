@@ -1,0 +1,67 @@
+1646544107411	Rename resource 'NewFile.jsp'
+1646544118459	Rename resource 'NewFile1.jsp'
+1646544127580	Move 'head.jsp' to 'includes'
+1646544146516	Move 'footer.jsp' to 'includes'
+1646550058409	Delete element
+1646556346846	Move 'update_product.jsp' to 'webapp'
+1646558499929	Delete element
+1646630584807	Delete element
+1646630596837	Delete element
+1646713789450	Delete element
+1646713810147	Delete element
+1646713829910	Delete element
+1646713841234	Delete element
+1646719323693	Move 'adminlogin.jsp' to 'admin'
+1646720811214	Move 'admin_register_page.jsp' to 'admin'
+1646722570276	Delete element
+1646722865939	Move 'adminlogin.jsp' to 'webapp'
+1646722870154	Move 'admin_register_page.jsp' to 'webapp'
+1646723012346	Move 'loginpage.jsp' to 'admin'
+1646723175440	Move 'loginpage.jsp' to 'webapp'
+1646723182063	Move 'adminlogin.jsp' to 'admin'
+1646723199084	Move 'admin_register_page.jsp' to 'admin'
+1646723201728	Move 'admin_home_page.jsp' to 'admin'
+1646724119101	Move 'Add_product.jsp' to 'admin'
+1646724341357	Move 'head.jsp' to 'admin'
+1646724343637	Move 'adminnavbar.jsp' to 'admin'
+1646724349630	Move 'footer.jsp' to 'admin'
+1646724367759	Copy files
+1646724501965	Move 'adminnavbar.jsp' to 'includes'
+1646728107438	Move 'All_products.jsp' to 'admin'
+1646729457403	Move 'adminnavbar.jsp' to 'admin'
+1646729669329	Move 'Add_product.jsp' to 'webapp'
+1646729672061	Move 'admin_home_page.jsp' to 'webapp'
+1646729674421	Move 'admin_register_page.jsp' to 'webapp'
+1646729680377	Move 'adminnavbar.jsp' to 'webapp'
+1646729685809	Move 'All_products.jsp' to 'webapp'
+1646729691909	Move 'footer.jsp' to 'webapp'
+1646729699237	Move 'adminlogin.jsp' to 'webapp'
+1646729704656	Move 'head.jsp' to 'includes'
+1646729714365	Delete element
+1646729721777	Move 'adminnavbar.jsp' to 'includes'
+1646741685095	Delete element
+1646763225942	Delete element
+1646806582852	Delete element
+1646809112748	Delete element
+1646809117133	Delete element
+1646809119939	Delete element
+1646809123984	Delete element
+1646809126713	Delete element
+1646809129446	Delete element
+1646809132073	Delete element
+1646809134923	Delete element
+1646818218131	Delete element
+1646828762965	Move 'search.jsp' to 'webapp'
+1646830349088	Delete element
+1646833176885	Delete element
+1646969968373	Delete element
+1646969986290	Delete element
+1646970006758	Delete element
+1646970020402	Delete element
+1646970491587	Delete elements
+1646972022731	Delete element
+1647021372432	Rename resource 'update_details.jsp'
+1647063827672	Rename resource 'bill_address.jsp'
+1647063850910	Rename resource 'shippingAddress.jsp'
+1647063894539	Rename resource 'Shiiping_address.jsp'
+1647067352692	Rename resource 'Add-Address.jsp'

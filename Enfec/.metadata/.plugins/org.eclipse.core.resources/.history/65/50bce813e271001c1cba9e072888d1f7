@@ -1,0 +1,11 @@
+package com.mallmanagement;
+interface Manager{
+	public void productAdd();
+	public void productModify();
+	public void productRemove();
+	pu
+	
+}
+public class MallManagement {
+
+}

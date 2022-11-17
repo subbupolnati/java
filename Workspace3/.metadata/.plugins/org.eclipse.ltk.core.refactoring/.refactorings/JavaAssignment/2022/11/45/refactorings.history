@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;JavaAssignment1/src&apos;&#x0D;&#x0A;- Original project: &apos;JavaAssignment&apos;&#x0D;&#x0A;- Destination element: &apos;JavaAssignment1/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.String.StringPattern.java&#x0D;&#x0A;     com.String.ReverseArray.java&#x0D;&#x0A;     com.String.MiddleOfArray.java" description="Copy compilation units" destination="=JavaAssignment1/src" element1="/src&lt;com.String{StringPattern.java" element2="/src&lt;com.String{ReverseArray.java" element3="/src&lt;com.String{MiddleOfArray.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1667372333493" units="3" version="1.0"/>
+</session>

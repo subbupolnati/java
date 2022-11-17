@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="EmployeeApplication"/>
+<aop-project name="EmployeeApplicationAop"/>
+<aop-project name="BookApplication"/>
+<aop-project name="EmployeeSpringWebMVCApplication"/>
+<aop-project name="RailwayApplication"/>
+<aop-project name="StudentSpringWebMVCApplication"/>
+<aop-project name="CalculatorSpringWebMVCApp"/>
+<aop-project name="StudentApplicationusingAop"/>
+<aop-project name="HelloWorldSpringWebApplication"/>
+<aop-project name="BookProject"/>
+</aop-reference-model>

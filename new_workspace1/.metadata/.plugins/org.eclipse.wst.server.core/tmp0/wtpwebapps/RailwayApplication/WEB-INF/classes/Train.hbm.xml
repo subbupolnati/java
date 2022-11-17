@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.railway.Train" table="Booking">
+		<id name="ticketno"/>
+		<property name="pname"/>
+		<property name="address"/>
+		<property name="trainno"/>
+		<property name="trainname"/>
+		<property name="from"/>
+		<property name="to"/>
+		<property name="coach"/>
+		<property name="price"/>
+	</class>
+</hibernate-mapping>

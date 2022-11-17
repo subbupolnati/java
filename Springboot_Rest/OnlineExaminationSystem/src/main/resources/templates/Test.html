@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/styles/style-backend.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="top-area">
+		<center><h2>Exam Panel</h2></center> <a th:href="@{/logout}" class="button" style="float: right;background:crimson;color:white">Logout</a>
+	</div>
+<div class="sidebar" style="background-image: url(images/sidebar-1.jpg)">
+				<div class="sidebar-background" >
+					<h2 class="logo-text">
+						Online Examination System
+					</h2>
+
+					<div class="left-menu">
+						<a class="active" th:href=@{/userhome}><h2>Exam</h2></a>
+					</div>
+				</div>
+			</div>
+<div class="content-area">
+             	<div class="panel form-style-6" style="float: left;max-width: 900px; padding-top: 40px;">
+<h1 th:text="${courseName}">Questions </h1>
+<!-- <form action="#" th:action="@{/resultSubmit}" method="post">
+    <ol type="1">
+        <li th:each="q:${ques}">
+        	<input type="hidden" th:name="${'solution['+ q.questionNo + ']'}" th:value="${q.questionNo}"/>
+        	<input type="hidden" th:name="question" th:value="${q.question}">
+            <span th:text="${q.question}"></span><br>
+            <input type="radio" th:text="${q.opt1}" th:name="${'solution['+ q.questionNo + ']'}" th:value="${q.opt1}"><br>
+            <input type="radio" th:text="${q.opt2}" th:name="${'solution['+ q.questionNo + ']'}" th:value="${q.opt2}"><br>
+            <input type="radio" th:text="${q.opt3}" th:name="${'solution['+ q.questionNo + ']'}" th:value="${q.opt3}"><br>
+           	<input type="radio" th:text="${q.opt4}" th:name="${'solution['+ q.questionNo + ']'}" th:value="${q.opt4}"><br>
+        </li>
+    </ol>
+    <input type="submit" value="Submit" />
+</form> -->
+<form th:object="${answer}" th:action="@{/resultSubmit}" method="post">
+		<div th:each="qa, status : *{questions}"><!-- using answer class list reference name -->
+			<p th:text="${status.count}+'. '+${qa.question}"/>
+			 <input type="radio" th:field="*{questions[__${status.index}__].correct}" th:value="${qa.opt1}" th:text="${qa.opt1}"/ checked><br>
+			 <input type="radio" th:field="*{questions[__${status.index}__].correct}" th:value="${qa.opt2}" th:text="${qa.opt2}"/><br>
+			 <input type="radio" th:field="*{questions[__${status.index}__].correct}" th:value="${qa.opt3}" th:text="${qa.opt3}"/><br>
+			 <input type="radio" th:field="*{questions[__${status.index}__].correct}" th:value="${qa.opt4}" th:text="${qa.opt4}"/><br>
+			 <input type="hidden" th:field="*{questions[__${status.index}__].questionNo}" th:value="${qa.questionNo}"/>
+			 <input type="hidden" th:field="*{questions[__${status.index}__].courseName}" th:value="${qa.courseName}"/>
+			 <input type="hidden" th:field="*{questions[__${status.index}__].question}" th:value="${qa.question}"/>
+			 <!-- <input type="hidden" th:field="*{questions[__${status.index}__].opt1}" th:value="${qa.opt1}"/>
+			 <input type="hidden" th:field="*{questions[__${status.index}__].opt2}" th:value="${qa.opt2}"/>
+			 <input type="hidden" th:field="*{questions[__${status.index}__].opt3}" th:value="${qa.opt3}"/>
+			 <input type="hidden" th:field="*{questions[__${status.index}__].opt4}" th:value="${qa.opt4}"/> -->
+		</div>
+		<br>
+		<input type="submit">
+	</form>
+
+</div></div>
+</body>
+</html>

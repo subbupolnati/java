@@ -1,0 +1,43 @@
+package com.airlinesproducer;
+
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.airlinesproducer.model.Airlines;
+import com.airlinesproducer.model.Passenger;
+import com.airlinesproducer.repository.AirlinesRepository;
+import com.airlinesproducer.repository.PassengerRepository;
+import com.airlinesproducer.service.AirlinesService;
+import com.airlinesproducer.service.PassengerService;
+
+public class AirlineServiceTest {
+
+	@Mock
+	AirlinesRepository airlineRepo;
+	
+	@Mock
+	PassengerRepository passengerRepo;
+	
+	@Autowired
+	AirlinesService airlineService;
+	
+	@Autowired
+	PassengerService passengerService;
+	List<Passenger> passengerList;
+	
+	@SuppressWarnings("deprecation")
+	@BeforeEach
+	void setUp() throws Exception {
+	MockitoAnnotations.initMocks(this);
+	passengerService=new PassengerService(this.passengerRepo);
+	Airlines airline=new Airlines();
+	airline.setId(1);
+	airline.setName("Kuwait Airlines");
+	airline.setCountry("Kuwait");
+	airline.setLogo("logo.png");
+	airline.setSlogan("sky");
+}

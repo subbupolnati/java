@@ -1,0 +1,5 @@
+127.0.0.1 - - [30/Mar/2022:12:59:55 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [30/Mar/2022:12:59:59 +0530] "GET /EmployeeApplication/index.jsp HTTP/1.1" 200 116
+0:0:0:0:0:0:0:1 - - [30/Mar/2022:12:59:59 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [30/Mar/2022:13:00:08 +0530] "GET /EmployeeApplication/emp? HTTP/1.1" 200 418
+0:0:0:0:0:0:0:1 - - [30/Mar/2022:13:00:14 +0530] "POST /EmployeeApplication/addEmp HTTP/1.1" 200 495

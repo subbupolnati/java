@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E-HelathCareManagementSystem</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/}">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Hospital</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/addHospital}">Add new Hospital</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewHospitals}">View All Hospital</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Surgeon</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/addsurgeon}">Add new Surgeon</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewroles}">View All Surgeon</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Nurses</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/addNurses}">Add new Nurses</a></li>
+            <li><a class="dropdown-item"th:href="@{/getAllPermission}">View All Nurses</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Ward</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/addWard}">Add new Ward</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewusers}">View All Wards</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">OperationTheatre</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/}">Add new OperationTheatre</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewbloods}">View All OperationTheatre</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Patients</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/addPatient}">Add new Patient</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewdonors}">View All Patient</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">patientOperations</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/addpatientOperation}">Add new PatientOperations</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewpatients}">View All PatientsOperations</a></li>
+          </ul>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/logout}">LogOut</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+	/* background-image: url("https://gos3.ibcdn.com/gostays-1581335657.png");
+	background-repeat: no-repeat;
+	background-size: 1500px 700px */
+	background-color: #009999;
+	}
+	button {
+		padding: 10px;
+	}
+	span {
+		color: red;
+		font-style: italic;
+	}
+	form {
+		display: table;
+	}
+	form div {
+		display: table-row;
+	}
+	label, span, select {
+		display: table-cell;
+		margin: 25px;
+		text-align:center;
+		font-size: 20px;
+	}
+	input[type=text], input[type=password], select, textarea {
+		width: 200px;
+		margin: 15px;
+	}
+	input[type=submit]{
+		width: 75px;
+		margin: 5px;
+		margin-left:33;
+	}
+	
+	form div div {
+		display: table-cell;
+	}
+	.card{
+		margin-top:12px;
+		marign-left:50%;
+		box-sizing:border-box;
+		border: 1px solid green;
+		background-color:white;
+		margin-left:33%;
+		margin-right: 25%;
+		margin-top:5%;
+  		width: 33%;
+ 		height: 300px;
+		
+	}
+	.div2 {
+  width: 600px;
+  height: 100px;  
+  padding: 30px;
+  //border: 1px solid red;
+  box-sizing: border-box;
+  margin-left:40%;
+}
+</style>
+</head>
+<body>
+	<div class="card"align="center">
+	<h1> Currency Converter</h1>
+	
+		<form action="#" th:action="@{/converting}" method="post" th:object="${converter}">
+		<div>
+		<label>Amount</label>
+		<input type="text" th:field="*{amount}" required="required"/>
+		</div>
+		<div>
+			<label>From</label>
+			<select th:field="*{from}" required="required">
+			<option value="none">Select Country</option>
+			<option value="rupee">Indian Rupee</option>
+			<option value="us">US-Dollor</option>
+			<option value="euro">Euro</option>
+			<option value="kwd">Kuwait Dinar</option>
+			<option value="uae">Emirati Dirham</option>
+			</select>
+		</div>
+		<div>
+			<label>To</label>
+			<select th:field="*{to}" required="required">
+			<option value="none">Select Country</option>
+			<option value="rupee">Indian Rupee</option>
+			<option value="us">US-Dollor</option>
+			<option value="euro">Euro</option>
+			<option value="kwd">Kuwait Dinar</option>
+			<option value="uae">Emirati Dirham</option>
+			</select>
+		</div>
+		<input type="submit" value="Convert">
+		</form>
+	</div>
+<div class="div2">
+<span th:text="${msg}" style="color:white;margin:5px 0px;"></span>&nbsp;<span th:text="${date}" style="color:white;margin:5px 0px;"></span>
+</div>
+</body>
+</html>

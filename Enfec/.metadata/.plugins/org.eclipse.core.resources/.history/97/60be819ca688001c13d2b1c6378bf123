@@ -1,0 +1,62 @@
+package com.shoppingmall.produts;
+
+import com.mallmanagement.customer.Customer;
+
+public class Movies {
+	Customer cust;//customer class inherit has-A type relation
+	private String movieName;
+	private int tickets;
+	private double ticketPrice;
+	private double totalPrice;
+	//create constructor with arguments
+	public Movies(Customer cust, String movieName, int tickets, double ticketPrice, double totalPrice) {
+		super();
+		this.cust = cust;
+		this.movieName = movieName;
+		this.tickets = tickets;
+		this.ticketPrice = ticketPrice;
+		this.totalPrice = totalPrice;
+	}
+	//getter and setter methods
+	public Customer getCust() {
+		return cust;
+	}
+	public void setCust(Customer cust) {
+		this.cust = cust;
+	}
+	public String getMovieName() {
+		return movieName;
+	}
+	public void setMovieName(String movieName) {
+		this.movieName = movieName;
+	}
+	public int getTickets() {
+		return tickets;
+	}
+	public void setTickets(int tickets) {
+		this.tickets = tickets;
+	}
+	public double getTicketPrice() {
+		return ticketPrice;
+	}
+	public void setTicketPrice(double ticketPrice) {
+		this.ticketPrice = ticketPrice;
+	}
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+	public double ticketprice(int tickets,double ticketPrice) {
+		totalPrice=tickets*ticketPrice;
+		return totalPrice;
+	}
+	public void display() {
+		System.out.println("**********************printing bill Payment recepit**********************");
+	    System.out.println("movie_name :"+movieName);
+	    System.out.println("how manay tickets :"+tickets);
+	    System.out.println("Tickets_price :"+ticketPrice);
+	    System.out.println("Tickets Total Price :"+totalPrice);
+	}
+}

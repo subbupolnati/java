@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<meta charset="ISO-8859-1">
+<title>Home</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+header{
+	width:100%;
+	height:60px;
+	border: 2px solid black;
+	background-color:#99ccff;
+}
+header input[type=search] {
+  //float: right;
+  padding:2px;
+  border: none;
+  margin-top:10px;
+  margin-left:33.33%;
+  font-size: 17px;
+  width:400px;
+}
+header a {
+  color:white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+	margin-left:85px;
+	display:inline-block;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#fff;
+  box-sizing: border-box;
+}
+.topnav{
+	 color: #fff;
+	 text-align:center;
+}
+.topnav ul{
+	display:inline-flex;
+	list-style: none;
+	color:#fff;
+}
+.topnav ul li {
+	width:150px;
+	margin:15px;
+	padding:10px;
+	}
+.topnav ul li a {
+  color:black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+.topnav a:hover {
+  background-color:#04AA6D;
+  color: white;
+  border-radius: 3px;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.sub-menu1{
+	display:none;
+}
+.topnav ul li:hover .sub-menu1{
+	display:block;
+	position: absolute;
+	background:#fff;
+	margin-top: 15px;
+	margin-left: -15px;
+}
+.topnav ul li:hover .sub-menu1 ul{
+	display:block;
+	margin:0px;
+}
+.topnav ul li:hover .sub-menu1 ul li{
+	 width:180px;
+	 padding:0px;
+	 background: transparent;
+	 //border-radius: 3px;
+	 text-align: left;
+}
+.topnav ul li:hover .sub-menu1 ul li :last-child{
+	border-bottom: none;
+	}
+.topnav ul li:hover .sub-menu1 ul li a:hover{
+	//color:blue;
+	
+	}
+.sub-menu2{
+	display:none;
+}
+.hover-me:hover .sub-menu2{
+	position:absolute;
+	display:block;
+	margin-top:-20px;
+	margin-left:160px;
+	background:#fff;
+}
+.img img{
+	width:100%;
+  background-size:cover;
+  //border: 1px solid red;
+  display:block;
+}
+.img img1{
+  background-size:cover;
+  //border: 1px solid red;
+  display:block;
+}
+</style>
+</head>
+<body>
+<header>
+<input type="search" placeholder="Search "><button type="submit"><i class="bi bi-search"></i>Search</button>
+<a href="loginpage.html">Login</a>
+<a href="loginpage.html">Signout</a>
+<a href="#">Cart</a><i class="bi bi-cart-fill"></i>
+
+</header>
+<nav class="topnav">
+<ul>
+<li><a class="active" href="products.html"><i class="bi bi-house"></i>Home</a></li>
+<li><a href="grocery.html">Grocery</a></li>
+<li><a href="https://www.flipkart.com/products-list/recommended-items?screen=dynamic&pk=stores%3Dtyy%2F4io%2F~pIds%3DMOBFYHGHAVKUUT3F%2CMOBGYV98YXYYAFKN%2CMOBG8SHDYGZJZPPF~contentTags%3DADD_PARENT_TO_WIDGET~marketplace%3DFLIPKART~widgetType%3DproductCard~contentType%3DpersonalisedRecommendation%2Fp2p-same&marketplace=FLIPKART&wid=10.productCard.PMU_V2_5">Mobiles</a></li>
+<li><a href="">Fashion <i class="bi bi-arrow-down-short"></i></a>
+	<div class="sub-menu1">
+		<ul>
+		<li class="hover-me"><a href="#">Men's Top Wear<i class="bi bi-arrow-right-short"></i></a>
+			<div class="sub-menu2">
+			<ul>
+				<li><a href="fashion.html">All</a></li>
+				<li><a href="#">Shirts</a></li>
+				<li><a href="#">Tea Shirts</a></li>
+			</ul>
+			</div>
+		</li>
+		<li class="hover-me"><a href="#">Men's Bottom Wear <i class="bi bi-arrow-right-short"></i></a>
+		<div class="sub-menu2">
+			<ul>
+				<li><a href="fashion.html">All</a></li>
+				<li><a href="#">jeans</a></li>
+				<li><a href="#">tracks</a></li>
+				<li><a href="#">boxers</a></li>
+			</ul>
+			</div>
+		
+		</li>
+		<li><a href="#">Women Ethnic</a></li>
+		<li><a href="#">Women Western</a></li>
+		<li><a href="#">men's Footwear</a></li>
+		<li><a href="#">Womens Footwear</a></li>
+		</ul>
+	</div>
+</li>
+<li><a href="electonics.html">Eletronics <i class="bi bi-arrow-down-short"></i></a>
+	<div class="sub-menu1">
+		<ul>
+		<li class="hover-me"><a href="#">audio<i class="bi bi-arrow-right-short"></i></a>
+			<div class="sub-menu2">
+			<ul>
+				<li><a href="electonics.html">All</a></li>
+				<li><a href="#">Ear phones</a></li>
+				<li><a href="#">Speakers</a></li>
+			</ul>
+			</div>
+		</li>
+		<li><a href="#">Laptop Accessories</a></li>
+		<li><a href="#">Computer Peripherals</a></li>
+		<li><a href="#">Gaming</a></li>
+		<li><a href="#">Powerbank</a></li>
+		<li><a href="#">MobileAccessory</a></li>
+		</ul>
+	</div>
+</li>
+<li><a href="furinture.html">Furniture</a></li>
+<li> <a href="applince.html">Home Appliances</a></li>
+</ul>
+</nav>
+<div class="img">
+<img src="https://rukminim1.flixcart.com/flap/844/140/image/587d950ee8e1a4ef.jpg?q=50" >
+</div>
+<div class="img">
+<img src="pro.jpg">
+</div>
+<div class="img">
+<img src="https://www.superthirty.com/wp-content/uploads/2020/11/modicare-product-price-list.jpg" height="100%">
+</div>
+</body>
+</html>

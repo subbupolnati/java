@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: sans-serif;
+}
+header{
+	width:100%;
+	height:60px;
+	border: 2px solid black;
+	background-color:#FF6347;
+}	
+header img{
+	margin-left:25.33%;
+	width:50px;
+	height:40px;
+}
+header input[type=text] {
+  //float: right;
+  padding:2px;
+  border: none;
+  margin-top:5px;
+  margin-left:16px;
+  font-size: 17px;
+  width:400px;
+}
+header a {
+  color:white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+	margin-left:85px;
+	display:inline-block;
+}
+.topnav {
+  overflow: hidden;
+  background-color:black;
+  box-sizing: border-box;
+}
+.topnav{
+	 color: #fff;
+	 text-align:center;
+}
+.topnav ul{
+	display:inline-flex;
+	list-style: none;
+	color:#fff;
+}
+.topnav ul li {
+	width:130px;
+	margin:10px;
+	padding:5px;
+	}
+.topnav ul li a {
+  color:white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+	margin-left:-85px;
+}
+
+.topnav a:hover {
+  background-color:#04AA6D;
+  color: white;
+  border-radius: 3px;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.sub-menu1 ,.sub-menu2{
+	display:none;
+	
+}
+.topnav ul li:hover .sub-menu1{
+	display:block;
+	position: absolute;
+	background:black;
+	margin-top:0px;
+	margin-left:-10px;
+	 
+	 height:250px;
+}
+.topnav ul li:hover .sub-menu1 ul{
+	display:inline-block;
+	margin:0px;
+}
+.topnav ul li:hover .sub-menu1 ul li{
+	width:200px;
+	 padding:5px;
+	 background: transparent;
+	 //border-radius: 3px;
+	 margin-left:90px;
+	 text-align:left;
+}
+.topnav ul li:hover .sub-menu1 ul li :last-child{
+	border-bottom: none;
+	}
+.sub-menu2{
+	display:none;
+}
+.hover-me:hover .sub-menu2{
+	position:absolute;
+	display:block;
+	margin-top:-20px;
+	margin-left:160px;
+	background:black;
+}
+.sidebar {
+  margin-left:50px;
+  margin-top:30px;
+  padding: 0;
+  width: 200px;
+  background-color:white;
+  //position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+background-image:url("https://blog.bookswagon.com/wp-content/uploads/2018/08/Online-Engineering-Books-Available-at-Lowest-Prices-on-Bookswagon-min-1-768x319.jpg");
+ background-repeat:no-repeat;
+ //background-position:center;
+  margin-left: 350px;
+  margin-right:100px;
+  margin-top:-650px;
+  padding: 1px 16px;
+  height:500px;
+  
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+.mid-nav{
+	diplay:inline-block;
+	margin-top:-40px;
+	margin-left: 350px;
+	padding:5px;
+	
+}
+.img{
+margin-left:320px;
+padding:10px;
+display:inline-block;
+}
+.img img{
+	margin-left:50px;
+}
+</style>
+</head>
+<body>
+<header>
+<img src="unnamed.png" >
+<input type="text" placeholder="Search by Title,Author,Publisher or ISBN"><button type="submit"><i class="fa fa-search"></i></button>
+<a href="#">Login</a>
+<a href="#">signout</a>
+<a href="#">Cart</a><i class="bi bi-cart-fill"></i>
+
+</header>
+<nav class="topnav">
+<ul>
+<li><a class="active" href="#"><i class="bi bi-house"></i></a></li>
+<li><a href="#">Books</a><i class="bi bi-arrow-down-short"></i>
+<div class="sub-menu1">
+<ul>
+<li class="hover-me"><a href="#" ><i class="bi bi-arrow-right-short"></i>Architecture</i></a>
+	<div class="sub-menu2">
+	<ul>
+	<li><a href="#"><i class="bi bi-arrow-right-short"></i>Fiction</a></li>
+	<li><a href="#"><i class="bi bi-arrow-right-short"></i>Law</a></li>
+	<li><a href=""><i class="bi bi-arrow-right-short"></i>Lifestyle</a></li>
+	<li><a href="#"><i class="bi bi-arrow-right-short"></i>Medicine</a></li>
+	<li><a href="#"><i class="bi bi-arrow-right-short"></i>Music</i></a></li>
+	<li><a href="#"><i class="bi bi-arrow-right-short"></i>Nursing</a></li>
+	</ul>
+	</div>
+</li>
+<li><a href="#"><i class="bi bi-arrow-right-short"></i>Arts & Photography</a></li>
+<li><a href=""><i class="bi bi-arrow-right-short"></i>Biography & Memories</a></li>
+<li><a href="#"><i class="bi bi-arrow-right-short"></i>Children& Teens</a></li>
+<li><a href="#"><i class="bi bi-arrow-right-short"></i>Computer & Internet</i></a></li>
+<li><a href="#"><i class="bi bi-arrow-right-short"></i>Busniess & Economics</a></li>
+</ul>
+</div>
+</li>
+<li><a href="#">New Arrivals</a></li>
+<li><a href="">Pre-Order</a></li>
+<li><a href="#">Bestsellers</a></li>
+<li><a href="#">Award Winners</i></a></li>
+<li><a href="#">Featured Authors</a></li>
+<li>Currency<select style="background-color:red">
+<option>INR</option>
+<option>Dollor</option>
+</select></li>
+</ul>
+</nav>
+<h1 style="margin-left:50px; margin-top:20px;color:red">Browser</h1>
+<nav class="sidebar">
+
+<ul>
+<li><a href="#">Architecture</i></a></li>
+<li><a href="#">Arts & Photography</a></li>
+<li><a href="">Biography & Memories</a></li>
+<li><a href="#">Children& Teens</a></li>
+<li><a href="#">Computer & Internet</i></a></li>
+<li><a href="#">Busniess & Economics</a></li>
+<li><a href="#">Architecture</i></a></li>
+<li><a href="#">Arts & Photography</a></li>
+<li><a href="">Biography & Memories</a></li>
+<li><a href="#">Children& Teens</a></li>
+<li><a href="#">Computer & Internet</i></a></li>
+<li><a href="#">Busniess & Economics</a></li>
+
+</nav>
+<div class="content">
+</div>
+<div class="mid-nav">
+<a href="#">BestSellers</a>|
+<a href="#">New Arrivals</a>|
+<a href="#">PreOrders</a>|</div>
+<div class="img">
+<img src="img1.jpeg"width="100px" height="150px">
+<img src="img1.jpeg"width="100px" height="150px">
+<img src="img1.jpeg"width="100px" height="150px">
+<img src="img1.jpeg"width="100px" height="150px">
+</div>
+</body>
+</html>

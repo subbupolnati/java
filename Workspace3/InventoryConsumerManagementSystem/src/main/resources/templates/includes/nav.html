@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/}">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Role</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/newrole}">Add new Role</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewroles}">View All Roles</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Permission</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/newpermission}">Add new Permissions</a></li>
+            <li><a class="dropdown-item"th:href="@{/getAllPermission}">View All Permissions</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Users</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/newuser}">Add new User</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewusers}">View All Users</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Customer</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/newCustomer}">Add new Customer</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewCustomers}">View All Customer Details</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Inventory</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/newInventory}">Add new Inventory</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewInventory}">View All Inventory</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Payments</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/newpayment}">Add new Payment</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewpayments}">View All Payments</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Supplier</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/newsupplier}">Add new Supplier</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewsuppliers}">View All Suppliers</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Stock</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/newstock}">Add new Stock</a></li>
+            <li><a class="dropdown-item"th:href="@{/viewstocks}">View All Stocks</a></li>
+          </ul>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/logout}">LogOut</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

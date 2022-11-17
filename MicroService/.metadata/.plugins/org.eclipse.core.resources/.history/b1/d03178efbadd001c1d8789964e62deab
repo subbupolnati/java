@@ -1,0 +1,23 @@
+package com.rest.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.rest.model.Response;
+import com.rest.service.PostAndUserService;
+
+@RestController
+public class PostAndUserController {
+
+	@Autowired
+	private PostAndUserService postAndUserService;
+	
+	
+	@GetMapping("/response")
+	public List<Response>getResponse(){
+		return postAndUserService.getResponse();
+	}
+}

@@ -1,0 +1,34 @@
+1662442718872	Move compilation unit
+1662442722790	Move compilation unit
+1662442728058	Move compilation unit
+1662442733022	Move compilation unit
+1662442750669	Move compilation unit
+1662442756178	Move compilation unit
+1662442759847	Move compilation unit
+1662442770161	Move compilation unit
+1662442774744	Move compilation unit
+1662443363088	Delete element
+1662443379660	Rename package 'com.inventorymanagementsystem.service'
+1662443431257	Move 'includes' to 'templates'
+1662443433618	Move 'CustomerRegister.html' to 'templates'
+1662443435577	Move 'InventoryRegister.html' to 'templates'
+1662443437335	Move 'home.html' to 'templates'
+1662443439321	Move 'loginPage.html' to 'templates'
+1662443441083	Move 'PermissionRegister.html' to 'templates'
+1662443482193	Move 'PaymentRegister.html' to 'templates'
+1662443484888	Move 'roleRegister.html' to 'templates'
+1662443486642	Move 'StockRegister.html' to 'templates'
+1662443488456	Move 'StocksList.html' to 'templates'
+1662443490254	Move 'success.html' to 'templates'
+1662443492099	Move 'SupplierRegister.html' to 'templates'
+1662443493607	Move 'UserRegister.html' to 'templates'
+1662443495227	Move 'viewCustomer.html' to 'templates'
+1662443496747	Move 'viewInventory.html' to 'templates'
+1662443499025	Move 'viewPayment.html' to 'templates'
+1662443500563	Move 'viewPermission.html' to 'templates'
+1662443503833	Move 'viewRoles.html' to 'templates'
+1662443505463	Move 'viewStocks.html' to 'templates'
+1662443506937	Move 'viewSupplier.html' to 'templates'
+1662443509000	Move 'viewUsers.html' to 'templates'
+1662443512894	Delete element
+1662460127959	Delete element

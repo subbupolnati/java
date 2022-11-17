@@ -1,0 +1,6 @@
+package com.seat_booking_customers;
+
+public interface Customerdetails {
+	public void getcustomer_details();
+	public void sorting_details();
+}

@@ -1,0 +1,13 @@
+package com.airlinesproducer;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class AirlinesProducerApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

@@ -1,0 +1,16 @@
+import com.employee.Employee1;
+import com.employee.marketing.Manager;
+import com.employee.manager.Marketing_Executive;
+public class TestEmp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee1 e=new Marketing_Executive(100,"subbu",10000);//Marketing_Executive class object creation
+		e.showDetails();
+		System.out.println("salary"+e.calculateSalary());//salary method calling
+		Employee1 e1=new Manager(101,"su",12000);//Manager class object creation
+		e1.showDetails();
+		System.out.println("salary"+e1.calculateSalary());//manager salary method calling
+	}
+
+}

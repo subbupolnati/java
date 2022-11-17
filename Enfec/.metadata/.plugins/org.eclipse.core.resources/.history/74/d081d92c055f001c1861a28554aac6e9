@@ -1,0 +1,27 @@
+package com.string;
+import java.util.*;
+public class Speccount {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int acount=0,nc=0,scount=0,spcount=0;
+		System.out.println("enter a String");
+		String s=sc.next();
+		for(int i=0;i<s.length();i++)
+		{	char ch=s.charAt(i);
+			if(ch>='a' && ch<='z' || ch>='A' && ch<='Z') {
+				acount+=1;
+			}
+			else if(ch>='0'|| ch>='9') {
+				nc+=1;
+			}
+			else if(ch==' ') {
+				spcount+=1;
+			}
+			else {
+				scount+=1;
+			}
+		}
+		System.out.println("special  count is:="+scount);
+	}
+
+}

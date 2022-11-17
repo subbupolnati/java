@@ -1,0 +1,14 @@
+1655702020866	Delete element
+1655702114435	Move 'edit.html' to 'templates'
+1655702118863	Move 'homepage.html' to 'templates'
+1655702126957	Move 'Userhome.html' to 'templates'
+1655702129925	Move 'register.html' to 'templates'
+1655702131947	Move 'login.html' to 'templates'
+1655702134434	Move 'loginregister.html' to 'templates'
+1655702136955	Move 'update.html' to 'templates'
+1655702139737	Delete element
+1655958251187	Rename resource 'edit.html'
+1655958266945	Rename resource 'update.html'
+1655958305601	Rename resource 'loginregister.html'
+1655958458718	Rename resource 'register.html'
+1655986654409	Rename package 'helper'

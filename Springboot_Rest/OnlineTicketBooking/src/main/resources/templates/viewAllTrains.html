@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<style>
+body{
+ background-color: #c6cfec;
+}
+
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Admin</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Buses</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/addbus}">Add new Bus</a></li>
+            <li><a class="dropdown-item"th:href="@{/bushome}">View All Buses</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Trains</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/addTrain}">Add new Train</a></li>
+            <li><a class="dropdown-item"th:href="@{/trainhome}">View All Trains</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Flights</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/addFlight}">Add new Flight</a></li>
+            <li><a class="dropdown-item"th:href="@{/flighthome}">View All Flight</a></li>
+          </ul>
+        </li>
+        <li class="nav-item ">
+           <a class="nav-link text-white" th:href="@{/logout}">Sign Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div align="center">
+<h1>All Trains List </h1>
+
+<table border="2"  width=80%>
+
+<tr>
+<th>Train Id</th>
+<th>Train Name</th>
+<th>To</th>
+<th>From</th>
+<th>price</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+<tr th:each="t:${train}">
+		<td th:text="${t.trainNo}"></td>
+		<td th:text="${t.trainName}"></td>
+		<td th:text="${t.to}"></td>
+		<td th:text="${t.from}"></td>
+        <td th:text="${t.price}"></td>
+        <td><a th:href="@{/updatetrain/{trainNo}(trainNo=${t.trainNo})}">Edit</a></td>
+        <td><a th:href="@{/deletetrain/{trainNo}(trainNo=${t.trainNo})}">Delete</a></td>
+  </tr>
+  </table>
+</div>
+</body>
+</html>

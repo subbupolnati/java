@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+	//background-image: url("https://press.youth4work.com/blogs/wp-content/uploads/2020/05/blog-post.png");
+	background-repeat: no-repeat;
+	background-size: 1500px 700px
+	
+	}
+	button {
+		padding: 10px;
+	}
+	span {
+		color: red;
+		font-style: italic;
+	}
+	form {
+		display: table;
+	}
+	form div {
+		display: table-row;
+	}
+	label, span, select {
+		display: table-cell;
+		margin: 25px;
+		text-align:center;
+		font-size: 30px;
+	}
+	input[type=text], input[type=password], select, textarea {
+		width: 200px;
+		margin: 15px;
+	}
+	input[type=submit]{
+		width: 50px;
+		margin: 5px;
+		margin-left:120px;
+	}
+	
+	form div div {
+		display: table-cell;
+	}
+	.card{
+	
+		margin-top:12px;
+		marign-left:50%;
+		box-sizing:border-box;
+		border: 1px solid green;
+		background-color:white;
+		margin-left:33%;
+		margin-right: 25%;
+		margin-top:10%;
+	}
+</style>
+</head>
+<body>
+	<div class="card" align="center">
+	<span th:text="${msg}" style="color:red;margin:10px 0px;"></span>
+	<h1>Product Update</h1>
+		<form action="#" th:action="@{/productupdate}" method="post" th:object="${product}">
+		<div>
+		<label>Category_ID</label>
+		<select  name="cid" th:field="*{category}" required="required"/>
+		<option th:each="c:${clist}" th:text="${c.type}" th:value="${c.category_id}"/>
+		</select>
+		</div>
+		<div>
+		<label>Product_ID</label>
+		<input type="text" th:field="*{product_id}"/>
+		</div>
+		<div>
+		<label>Product_Name</label>
+		<input type="text" name="pname" th:field="*{name}"required="required"/>
+		</div>
+		<div>
+		<label>Available_Qantity</label>
+		<input type="text" name="avl_qul" th:field="*{availabel_quntity}"required="required"/>
+		</div>
+		<div>
+		<label>Price</label>
+		<input type="text" name="price" th:field="*{price}"required="required"/>
+		</div>
+		<input type="submit" value="submit">
+		</form>
+	</div>
+	<a th:href="@{/homepage}">BACK</a>
+</body>
+</html>

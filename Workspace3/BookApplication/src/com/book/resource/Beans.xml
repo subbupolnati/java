@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="author" class="com.book.bean.Author">
+<property name="author" value="james"/>
+</bean>
+<bean id="b" class="com.book.bean.Book" autowire="byType">
+<property name="bid" value="100"/>
+<property name="bname" value="java"/>
+<property name="price" value="250"/>
+<!-- <property name="author" ref="author"/> -->
+</bean>
+
+</beans>

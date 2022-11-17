@@ -1,0 +1,59 @@
+package com.rest.service;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import com.rest.model.Posts;
+import com.rest.model.Response;
+import com.rest.model.User;
+
+@Service
+public class PostAndUserService {
+
+	private RestTemplate restTemplate;//create reference of RestTemplate 
+	//Argument constructor  
+	public PostAndUserService(RestTemplate restTemplate) {
+		super();
+		this.restTemplate = restTemplate;
+	}
+	final String userurl="https://jsonplaceholder.typicode.com/users";//This is User url
+	final String posturl="https://jsonplaceholder.typicode.com/posts";//This is Post url
+	
+	//This Method perform response creating operations
+	public List<Response>getResponse(){
+		List<Response>responseList=new ArrayList<Response>();
+		HttpEntity<User> entity=new HttpEntity<User>(null,null);
+		//get and store the userResponse in user class using rest template  exchange method
+		ResponseEntity<User[]> userResponse=restTemplate.exchange(userurl,HttpMethod.GET,entity,User[].class);
+		User[] users = userResponse.getBody();//store data in user class 
+		List<User>userList= Arrays.asList(users);//convert to arrays into list
+		//System.out.println(userList);
+		HttpEntity<Posts> postentity=new HttpEntity<Posts>(null,null);
+		//get and store the post Response in posts class using rest template  exchange method
+		ResponseEntity<Posts[]> postRes=restTemplate.exchange(posturl,HttpMethod.GET,postentity,Posts[].class);
+		Posts[] posts = postRes.getBody();//store data in posts class 
+		List<Posts>postList= Arrays.asList(posts);//convert to arrays into list
+		//System.out.println(postList);
+		//Iterating  user list and post list
+		for(User user:userList) {
+			for(Posts post:postList) {
+				if(user.getId()==post.getId()) {//this condition checks user class id and post class id
+					Response response=new Response();//creating object to Response class
+					response.setLat(user.getAddress().getGeo().getLat());//set latitude value using setter method
+					response.setLng(user.getAddress().getGeo().getLng());//set latitude value using setter method
+					response.setCompany_name(user.getCompany().getName());//set latitude value using setter method
+					response.setTitle(post.getTitle());//set latitude value using setter method
+					response.setBody(post.getBody());//set latitude value using setter method
+					responseList.add(response);//add the data into list
+				}
+			}
+		}
+		return responseList;
+	}
+	
+}

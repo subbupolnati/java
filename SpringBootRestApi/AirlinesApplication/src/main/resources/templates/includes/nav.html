@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Airlines</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/airline}">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Airlines</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/airline}">Add new Airlines</a></li>
+            <li><a class="dropdown-item"th:href="@{/airlineList}">View Airlines</a></li>
+            <li><a class="dropdown-item"th:href="@{/passengerByAirline}">View Passenger By Airline Wise</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Passengers</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" th:href="@{/passenger}">Add new Passenger</a></li>
+            <li><a class="dropdown-item"th:href="@{/passengerList}">View All Passenger</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

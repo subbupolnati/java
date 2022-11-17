@@ -1,0 +1,85 @@
+@charset "ISO-8859-1";
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#bbb;
+  box-sizing: border-box;
+}
+.topnav{
+	 color: #fff;
+	 text-align:center;
+	 height:auto;
+}
+.topnav ul{
+	display:inline-flex;
+	list-style: none;
+	color:#fff;
+}
+.topnav ul li {
+	width:160px;
+	margin:15px;
+	padding:15px;
+	}
+.topnav ul li a {
+  color:black;
+  //text-align;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+.topnav a:hover {
+  background-color:blue;
+  color: white;
+  border-radius: 3px;
+}
+
+.topnav a.active {
+  background-color: blue;
+  color: white;
+}
+.sub-menu1{
+	display:none;
+}
+.topnav ul li:hover .sub-menu1{
+	display:block;
+	position: absolute;
+	background:#bbb;
+	margin-top: 10px;
+	margin-left: -15px;
+}
+.topnav ul li:hover .sub-menu1 ul{
+	display:block;
+	margin:0px;
+}
+.topnav ul li:hover .sub-menu1 ul li{
+	 width:200px;
+	 padding:5px;
+	 background: transparent;
+	 //border-radius: 3px;
+	 text-align: left;
+}
+.topnav ul li:hover .sub-menu1 ul li :last-child{
+	border-bottom: none;
+	}
+.topnav ul li:hover .sub-menu1 ul li a:hover{
+	//color:blue;
+	
+	}
+.sub-menu2{
+	display:none;
+}
+.hover-me:hover .sub-menu2{
+	position:absolute;
+	display:block;
+	margin-top:-20px;
+	margin-left:160px;
+	background:#fff;
+}

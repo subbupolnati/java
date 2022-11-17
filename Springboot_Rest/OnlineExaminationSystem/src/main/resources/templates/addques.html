@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title></title>
+	<link th:href="@{/styles/style-backend.css}" rel="stylesheet" />
+</head>
+<body>
+	<div class="top-area">
+		<center><h2>Admin Panel</h2></center> <a th:href="@{/logout}" class="button" style="float: right;background:crimson;color:white">Logout</a>
+	</div>
+<!-- SIDEBAR -->
+			<div class="sidebar" style="background-image: url(images/sidebar-1.jpg)">
+				<div class="sidebar-background" >
+					<h2 class="logo-text">
+						Online Examination System
+					</h2>
+
+					<div class="left-menu">
+						<a class="active" th:href=@{/course}><h2>Courses</h2></a>
+                        <a th:href="@{/addQues}"><h2>Questions</h2></a>
+					</div>
+				</div>
+			</div>
+            <!-- CONTENT AREA -->
+            <div class="content-area" >
+                            <div class="panel form-style-6" style="min-width: 300px;max-width: 390px;float: left">
+            <form th:action="@{/questions}" method="post">
+                <div class="title">Show All Questions for</div>
+                <br><br>
+                <label>Select Course</label>
+                <select name="courseName" class="text">
+                	<option th:value="${c.cName}" th:each="c:${clist}" th:text="${c.cName}"></option>
+            </select>
+            <input type="submit" value="Show" class="form-button">
+            </form>
+         </div>
+        
+        <div class="panel form-style-6" style="max-width: 420!important;float: right">   
+               <form action="#" th:action="@{/save}" method="post" th:object="${questions}">
+                   <div class="title">Add New Question</div>
+                   <table >
+                       <tr>
+                           <td><label>Course Name</label></td>
+                           <td colspan="3"> 
+                               <select th:field="*{courseName}"class="text">
+        `								<option th:value="${c.cName}" th:each="c:${clist}" th:text="${c.cName}"></option>
+            					</select>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td><label>Your Question:</label></td>
+                           <td colspan="4"><input type="text" th:field="*{question}" class="text" placeholder="Type your question here" style="width: 420px;" ></td><br>
+                       </tr>
+                       <tr>
+                           <td><label>Options</label></td>
+                           <td><input type="text" th:field="*{opt1}" class="text" placeholder="First Option" style="width: 130px;" ></td>
+                           <td><input type="text" th:field="*{opt2}" class="text" placeholder="Second Option" style="width: 130px;" ></td>
+                           <td><input type="text" th:field="*{opt3}" class="text" placeholder="Third Option" style="width: 130px;" ></td>
+                           <td><input type="text" th:field="*{opt4}" class="text" placeholder="Fourth Option" style="width: 130px;" ></td>
+                       </tr>
+                       <tr>
+                           <td><label>Correct Answer</label></td>
+                           <td colspan="4"><center><input type="text" th:field="*{correct}" class="text" placeholder="Correct Answer" style="width: 130px;" ></center></td>
+                   </tr>
+                   </table>
+ 		<center><input type="submit" class="form-button" value="Add" name="submit"></center></td>
+                </form>
+           
+    
+     </div>
+                        </div>
+</body>
+</html>

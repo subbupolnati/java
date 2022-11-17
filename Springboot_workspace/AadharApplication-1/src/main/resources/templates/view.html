@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+<h1>All Aadhar List </h1>
+
+<table border="2"  width=80%>
+
+<tr>
+<th>AadharNumber</th>
+<th>Name</th>
+<th>Image</th>
+<th>Update</th>
+<th>Delete</th>
+</tr>
+<tr th:each="f:${aadhar}">
+		<td th:text="${f.aadharNumber}"></td>
+		<td th:text="${f.name}"></td>
+       <!--   <td><img th:src="@{'data:image/jpg;base64,'+${f.image}}"/></td>-->
+       <td><img th:src="'data:image/*;base64,' + ${f.image}" alt="" height="100px" width="110px"/></td>
+      <td><a th:href="@{/update/{aadharNumber}(aadharNumber=${f.aadharNumber})}">Edit</a></td>
+      <td><a th:href="@{/delete/{aadharNumber}(aadharNumber=${f.aadharNumber})}">Delete</a></td>
+       
+  </tr>
+  </table>
+ 	<a th:href="@{/newaadhar}">Add New Aadhar</a>
+</div>
+</body>
+</html>

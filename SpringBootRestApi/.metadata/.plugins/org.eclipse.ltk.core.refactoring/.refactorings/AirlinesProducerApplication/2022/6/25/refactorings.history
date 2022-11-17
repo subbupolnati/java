@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.airlinesproducer.exceptions&apos; to &apos;BookApplicationCassandra/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;AirlinesProducerApplication&apos;&#x0D;&#x0A;- Destination element: &apos;BookApplicationCassandra/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;AirlinesProducerApplication/src/main/java/com.airlinesproducer.exceptions&apos;" description="Copy package" destination="=BookApplicationCassandra/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.airlinesproducer.exceptions" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1655374102273" version="1.0"/>
+</session>

@@ -1,0 +1,72 @@
+package com.employee.manager;
+
+import com.employee.Employee1;
+public class Marketing_Executive extends Employee1{
+	 int ma=200;
+	 int comm;
+	 int ta;
+	public int getMa() {
+		return ma;
+	}
+	public void setMa(int ma) {
+		this.ma = ma;
+	}
+	public int getComm() {
+		return comm;
+	}
+	public void setComm(int comm) {
+		this.comm = comm;
+	}
+	public int getTa() {
+		return ta;
+	}
+	public void setTa(int ta) {
+		this.ta = ta;
+	}
+	Marketing_Executive(){
+		super();
+	}
+	public Marketing_Executive(int eid,String ename,int bsal){
+		super(eid,ename,bsal);
+		this.ta=calcTa();
+		this.comm=calcComm();
+		this.ma=200;
+	}
+	public int calcTa()
+	{
+		ta=(int)(bsal*0.05);
+		return ta;
+	}
+	public int calcComm()
+	{
+		comm=(int)(bsal*0.02);
+		return comm;
+	}
+	public int calculateSalary()
+	{
+		gross=bsal+ta+comm+ma;
+		return gross;
+	}
+	
+	public int calcTa1(int bsal) {
+		ta=(int)(bsal*0.05);
+		return ta;
+	}
+	public int calcuComm1(int bsal) {
+		comm=(int)(bsal*0.02);
+		return comm;
+	}
+	public int calcSalary1(int bsal ,int ta,int comm,int ma)
+	{
+		gross=bsal+ta+comm+ma;
+		return gross;
+	}
+	public void showDetails()
+	{
+		super.showDetails();
+		System.out.println("ta is: "+ta);
+		System.out.println("Medical: "+ma);
+		System.out.println("commision: "+comm);
+	}
+	
+}

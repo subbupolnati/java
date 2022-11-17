@@ -1,0 +1,22 @@
+package com.aadhar.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.aadhar.respository.AadharRepsoitory;
+
+@Service
+public class AadharService {
+
+	@Autowired
+	private AadharRepsoitory aadharRepository;
+
+	public AadharRepsoitory getAadharRepository() {
+		return aadharRepository;
+	}
+
+	public void setAadharRepository(AadharRepsoitory aadharRepository) {
+		this.aadharRepository = aadharRepository;
+	}
+	
+}

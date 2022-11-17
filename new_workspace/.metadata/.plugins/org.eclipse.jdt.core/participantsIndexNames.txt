@@ -1,0 +1,17 @@
+INDEX VERSION 1.131
+C:\new_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\832482701.index
+\OnlineShopping1\src\main\java
+C:\new_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1864087790.index
+\JspRegistrationApp\src\main\java
+C:\new_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3031601772.index
+\Retrive ALLImages\src\main\java
+C:\new_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2292190320.index
+\ImagestoreandgetDatabase\src\main\java
+C:\new_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1037787204.index
+\application\src\main\java
+C:\new_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3397061681.index
+\OnlineShopping1\src\main\java
+C:\new_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2155915187.index
+\OnlineShopping1\src\main\java
+C:\new_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3600227490.index
+\OnlineShopping1\src\main\java

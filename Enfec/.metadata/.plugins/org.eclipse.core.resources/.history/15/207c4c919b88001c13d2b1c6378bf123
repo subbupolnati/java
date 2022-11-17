@@ -1,0 +1,49 @@
+package com.seat_booking_customers;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
+public interface Customerdetails {
+	
+	//default method using enter customer details 
+	ArrayList<Customer> cus=new ArrayList<Customer>();
+	default void getcustomer_details() {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter customer name");
+		String customer_name=sc.next();
+		System.out.println("enter customer mobile number");
+		long mobile_no=sc.nextLong();
+		System.out.println("enter customer address");
+		String address=sc.next();
+		System.out.println("enter seat number");
+		int seat_no=sc.nextInt();
+		Collections.sort(cus,new SeatId());
+		Customer cu=new Customer(null,0,null,seat_no);
+		int index=Collections.binarySearch(cus,cu,new SeatId());
+		if(index<0)
+			cus.add(new Customer(customer_name,mobile_no,address,seat_no));
+			
+		else {
+				System.out.println("seat already booked");
+				System.out.println("please enter anthoer seat number");
+				seat_no=sc.nextInt();
+				cus.add(new Customer(customer_name,mobile_no,address,seat_no));
+		}
+	}
+}
+//seat id sorting  class in created implementing comparator
+class SeatId implements Comparator<Customer>{
+
+	@Override
+	public int compare(Customer o1, Customer o2) {
+		if(o1.seat_no<o2.seat_no)
+			return -1;
+		else if(o1.seat_no>o2.seat_no)
+			return 1;
+		else
+			return 0;
+	}
+	
+}

@@ -1,0 +1,24 @@
+package com.String;
+
+public class ReverseArray {
+	public static int[] findReverseArray(int[] num) {
+		int j = 0;
+
+		for(int i = num.length-1; i > 0; i--){
+		int temp = num[j];
+		num[j++] = num[i];
+		num[i] = temp;
+		}
+		return num;
+		
+	}
+	public static void main(String[] args) {
+		int[] num= {5,6,7,8};
+		int[] reverse=findReverseArray(num);
+		System.out.print("reverse Array:");
+		for(int i=0;i<reverse.length;i++) {
+			System.out.print(reverse[i]+" ");
+		}
+	}
+
+}
